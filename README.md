@@ -16,3 +16,6 @@ Return:
 `$ chessercise.py --piece KNIGHT --position d2`
 
 The response should be:  `“b1, f1, b3, f3,c4, e4"`
+
+# Algebraic Notation Legend: 
+![Algebric notation](https://github.com/Divyapuja/Chess/blob/master/AlgebricNotation.png)
