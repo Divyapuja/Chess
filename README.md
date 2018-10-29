@@ -73,3 +73,5 @@ coverage run test_chessercise.py --piece QUEEN --position d2
 coverage html
 ```
 <img src="https://github.com/Divyapuja/Chess/blob/master/CoverageReport.png" alt="Coverage Report" width="400" height="250">
+
+Coverage report can be found in <Current_Directory_From_Where_This_Python_code_Is_Run>/htmlcov/index.html. Open `index.html` in any browser.
