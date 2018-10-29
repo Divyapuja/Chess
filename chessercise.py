@@ -7,7 +7,6 @@
 # When a piece type and input position is entered to run the program, there are no other pieces on the board.
 #
 import sys
-import numpy as np
  
 # Find possible moves for a given piece
 def findPossibleMoves(piece, pos1, pos2):
@@ -16,7 +15,7 @@ def findPossibleMoves(piece, pos1, pos2):
     elif piece =='ROOK':
         moves = rookMoves(pos1, pos2)
     elif piece == 'QUEEN':
-        moves =queenMoves(pos1, pos2)
+        moves = queenMoves(pos1, pos2)
     return moves
 
 
@@ -86,15 +85,12 @@ def goNorthEast(fromColumn,fromRow,toRight, toUp):
 def goSouthEast(fromColumn,fromRow):
     moves =[]
     for i in range(fromRow-1,0,-1):
-        #print('i=',i)
         if i in numberToAlphabet:
             fromColumn = fromColumn +1
             fromRow=fromRow-1
             if fromColumn<N+1 and fromRow>0:
                 movePos = str(fromRow)+str(numberToAlphabet[fromColumn])
                 moves.append(movePos)
-    #print('\tSouth East Moves-------> ', len(moves))
-    #printMoves(moves)
     return moves
 
 # Get all south west moves for queen
@@ -107,8 +103,6 @@ def goSouthWest(fromColumn,fromRow):
             if fromColumn>0 and fromRow >0:
                 movePos = str(fromRow) + str(numberToAlphabet[fromColumn])
                 moves.append(movePos)
-    #print('\tSouth West Moves-------> ', len(moves))
-    #printMoves(moves)                
     return moves
 
 # Get all north west moves for queen
@@ -121,8 +115,6 @@ def goNorthWest(fromColumn,fromRow):
             if fromColumn>0 and fromRow < N+1:
                 movePos = str(fromRow) + str(numberToAlphabet[fromColumn])
                 moves.append(movePos)
-    #print('\tNorth West Moves-------> ', len(moves))
-    #printMoves(moves)
     return moves
 
 
@@ -153,6 +145,7 @@ def queenMoves(fromColumn, fromRow):
     toRight = N - fromColumn
     toUp = N - fromRow
     moves = rookMoves(fromColumn, fromRow) + goNorthEast(fromColumn, fromRow, toRight, toUp) + goSouthEast(fromColumn, fromRow) + goSouthWest(fromColumn, fromRow) + goNorthWest(fromColumn, fromRow) 
+    #print(moves)
     return moves
 
 # print the moves
@@ -161,7 +154,7 @@ def printMoves(moves):
     allMoves = []
     for i in sorted(moves):
         allMoves.append(i[1]+i[0])
-    print(',' .join(allMoves))
+    return ',' .join(allMoves)
 
 
 '''
@@ -192,7 +185,7 @@ def main():
     
     moves = findPossibleMoves(piece, pos1, pos2)
     
-    printMoves(moves)
+    print(printMoves(moves))
 
 
 # Program execution starts here
