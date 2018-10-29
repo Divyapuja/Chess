@@ -71,3 +71,5 @@ coverage run test_chessercise.py --piece ROOK --position d2
 coverage run test_chessercise.py --piece QUEEN --position d2
 coverage html
 ```
+
+![Coverage Report](https://github.com/Divyapuja/Chess/blob/master/CoverageReport.png)
