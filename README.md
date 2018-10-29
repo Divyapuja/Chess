@@ -18,7 +18,7 @@ Return:
 The response should be:  `“b1, f1, b3, f3,c4, e4"`
 
 # Algebraic Notation Legend: 
-![Algebric notation](https://github.com/Divyapuja/Chess/blob/master/AlgebricNotation.png)
+<img src="https://github.com/Divyapuja/Chess/blob/master/AlgebricNotation.png" alt="Algebric notation" width="250" height="250">
 
 # Example
 - python chessercise.py --piece KNIGHT --position d2
@@ -71,5 +71,4 @@ coverage run test_chessercise.py --piece ROOK --position d2
 coverage run test_chessercise.py --piece QUEEN --position d2
 coverage html
 ```
-
-![Coverage Report](https://github.com/Divyapuja/Chess/blob/master/CoverageReport.png)
+<img src="https://github.com/Divyapuja/Chess/blob/master/CoverageReport.png" alt="Coverage Report" width="400" height="250">
