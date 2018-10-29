@@ -1,3 +1,4 @@
+# Python Version - Python 3.6.1
 In python, and given standard algebraic notation of a chess board (see below), write code that will:
 
 Accept two parameters:
